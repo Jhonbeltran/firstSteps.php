@@ -1,0 +1,13 @@
+{
+    "name": "jhonbeltran/firststeps",
+    "description": "Primer proyecto php con platzi",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jhonbeltran",
+            "email": "jbeltranleon@gmail.com"
+        }
+    ],
+    "require": {}
+}
