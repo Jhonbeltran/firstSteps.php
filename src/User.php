@@ -3,9 +3,9 @@
 namespace PlatziPHP;
 
 class User {
-  private $email;
-  private $password;
-  private $firstName;
+  protected $email;
+  protected $password;
+  protected $firstName;
   protected $lastName;
 
   //constructor
