@@ -22,6 +22,10 @@ class User {
   public function getFirstName(){
     return $this->firstName;
   }
+
+  public function getPassword(){
+    return $this->password;
+  }
 }
 
 ?>

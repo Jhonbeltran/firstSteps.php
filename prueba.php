@@ -16,5 +16,7 @@ $author->setName('Jhon', 'Beltran');
 
 echo $author->getFirstName();
 echo PHP_EOL;
+echo $author->getPassword();
+echo PHP_EOL;
 
 ?>
