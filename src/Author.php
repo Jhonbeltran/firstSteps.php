@@ -16,5 +16,3 @@ class Author extends User {
     return $this->lastName;
   }
 }
-
-?>

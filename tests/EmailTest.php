@@ -18,4 +18,3 @@ class EmailTest extends PHPUnit_Framework_TestCase{
     $email = new Email('jbeltranleon');
   }
 }
-?>

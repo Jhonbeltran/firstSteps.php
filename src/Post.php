@@ -20,4 +20,3 @@ class Post{
     return 'by ' . $this->author->getFirstName();
   }
 }
-?>
