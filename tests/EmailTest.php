@@ -10,5 +10,12 @@ class EmailTest extends PHPUnit_Framework_TestCase{
       $email
     );
   }
+
+  function testEmailInvalid(){
+    $this->setExpectedException(
+      \InvalidArgumentException::class
+    );
+    $email = new Email('jbeltranleon');
+  }
 }
 ?>
