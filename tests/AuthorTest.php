@@ -22,4 +22,3 @@ class AuthorTest extends PHPUnit_Framework_TestCase{
       $this->assertInstanceOf(\PlatziPHP\Author::class, $author);
     }
 }
-?>
