@@ -1,4 +1,9 @@
 <?php
+use PlatziPHP\Http\Controllers\HomeController;
+use Illuminate\Http\Request;
 require_once __DIR__ . '/../vendor/autoload.php';
 
-echo 'Hi';
+$controller = new HomeController();
+$request = Request::capture();
+
+echo $controller->index($request);
