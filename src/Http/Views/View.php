@@ -1,5 +1,7 @@
 <?php
 namespace PlatziPHP\Http\Views;
+use Symfony\Component\HttpFoundation\Response;
+
 class View{
     private $template;
     private $params;

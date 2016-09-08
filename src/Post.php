@@ -12,6 +12,10 @@ class Post{
     $this->body = $body;
   }
 
+  function getTitle(){
+    return $this->title;
+  }
+
   function getBody(){
     return $this->body;
   }
