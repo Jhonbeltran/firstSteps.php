@@ -17,6 +17,9 @@
                         <li>
                             <h2>
                                 <?= $post->getTitle() ?>
+                                <small>
+                                    <?= $post->getAuthor()?>
+                                </small>
                             </h2>
                             <p>
                                 <?= $post->getBody() ?>

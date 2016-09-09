@@ -1,22 +1,19 @@
 <?php
 namespace PlatziPHP\Http\Controllers;
 use Illuminate\Http\Request;
-use PlatziPHP\Author;
+use PlatziPHP\FakeDatabase;
 use PlatziPHP\Http\Views\View;
-use PlatziPHP\Post;
+
 
 
 class HomeController{
-	public function index(Request $request){
+    private  $db;
 
-		$author = new Author('jbeltranleon@gmail.com', 'taran', 'AUTOR_PLATZI');
+    public function __construct(FakeDatabase $db){
+        $this->db = $db;
+    }
 
-		$post = [
-			new Post($author, 'First Blood', 'This is the first post'),
-			new Post($author, 'Post #2', 'This is the second post'),
-			new Post($author, 'Post #3', 'This is the third post'),
-			new Post($author, 'Post #4', 'This is the fourth post'),
-		];
+    public function index(Request $request){
 
 		$view = new View('home', [
 			'post' => $post
