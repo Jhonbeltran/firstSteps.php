@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col s12 m10 l8">
             <ul>
-                <?php foreach ($post as $post): ?>
+                <?php foreach ($posts as $post): ?>
                     <div class="divider"></div>
                     <div class="section">
                         <li>
@@ -21,9 +21,13 @@
                                     <?= $post->getAuthor()?>
                                 </small>
                             </h2>
-                            <p>
-                                <?= $post->getBody() ?>
-                            </p>
+                            <?php if ($post == $firstPost): ?>
+                                <p>
+                                    <?= $post->getBody() ?>
+                                </p>
+                            <?php else: ?>
+                                <p>Sumary...</p>
+                            <?php endif; ?>
                         </li>
                     </div>
                 <?php endforeach; ?>

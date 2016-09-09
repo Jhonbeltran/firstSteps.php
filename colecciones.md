@@ -17,3 +17,17 @@ el cual requiere de illuminate.
 
 * Dependencia: Puede significar que requerimos este elemento en el 
 constructor
+
+creamos la coleccion como:
+
+use Illuminate\Suport
+new Collection([]) 
+
+
+en las colecciones encontramos muchos metodos para manejar lo que queremos
+hacer con el grupo de objetos, podemos promediarlos, ordenarlos, obtenerlos
+todos o una parte de ellos, saber si la colección contiene algun objeto en 
+especifico entre otras varias cosas.
+
+si deseamos podríamos usar una colleccion para modelar un acceso a base de
+datos.

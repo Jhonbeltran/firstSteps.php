@@ -15,8 +15,13 @@ class HomeController{
 
     public function index(Request $request){
 
+		$posts = $this->db->posts();
+
+        $first = $posts->first();
+
 		$view = new View('home', [
-			'post' => $post
+			'posts' => $posts,
+            'firstPost' => $first
 		]);
 
 		$response = $view->render();
