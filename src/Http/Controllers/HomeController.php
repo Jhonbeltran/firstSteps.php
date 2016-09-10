@@ -24,8 +24,6 @@ class HomeController{
             'firstPost' => $first
 		]);
 
-		$response = $view->render();
-
-		$response->send();
+		return $view->render();
 	}
 }

@@ -3,7 +3,15 @@ use PlatziPHP\Http\Controllers\HomeController;
 use Illuminate\Http\Request;
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$controller = new HomeController(new \PlatziPHP\FakeDatabase());
-$request = Request::capture();
+$container = new Illuminate\Container\Container();
 
-$controller->index($request);
+$router = new \Illuminate\Routing\Router(
+    new \Illuminate\Events\Dispatcher($container),
+    $container
+);
+
+$router->get('/', HomeController::class . '@index');
+
+$response = $router->dispatch(Request::capture());
+
+$response->send();
