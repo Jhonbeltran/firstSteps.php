@@ -16,7 +16,7 @@
                     <?= $post->getAuthor() ?>
                 </small>
             </h1>
-            <p><?= $post->getBody ?></p>
+            <p><?= $post->getBody() ?></p>
         </div>
     </div>
 </div>

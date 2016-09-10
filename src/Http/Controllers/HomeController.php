@@ -26,4 +26,14 @@ class HomeController{
 
 		return $view->render();
 	}
+
+	public function show(){
+		$posts = $this->db->posts();
+
+		$view = new View('post_details', [
+			'post' => $posts->first()
+		]);
+
+		return $view->render();
+	}
 }
