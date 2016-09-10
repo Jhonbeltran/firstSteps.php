@@ -27,11 +27,11 @@ class HomeController{
 		return $view->render();
 	}
 
-	public function show(){
+	public function show($id){
 		$posts = $this->db->posts();
 
 		$view = new View('post_details', [
-			'post' => $posts->first()
+			'post' => $posts->get($id)
 		]);
 
 		return $view->render();

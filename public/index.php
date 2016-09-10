@@ -11,7 +11,7 @@ $router = new \Illuminate\Routing\Router(
 );
 
 $router->get('/', HomeController::class . '@index');
-$router->get('/post/1', HomeController::class . '@show');
+$router->get('/post/{id}', HomeController::class . '@show');
 
 $response = $router->dispatch(Request::capture());
 
