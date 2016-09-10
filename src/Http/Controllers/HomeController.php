@@ -1,12 +1,13 @@
 <?php
 namespace PlatziPHP\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use PlatziPHP\FakeDatabase;
 use PlatziPHP\Http\Views\View;
 
 
 
-class HomeController{
+class HomeController extends Controller{
     private  $db;
 
     public function __construct(FakeDatabase $db){
