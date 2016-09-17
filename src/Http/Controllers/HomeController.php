@@ -2,7 +2,7 @@
 namespace PlatziPHP\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use PlatziPHP\FakeDatabase;
+use PlatziPHP\Infrastructure\FakeDatabase;
 use PlatziPHP\Http\Views\View;
 
 
