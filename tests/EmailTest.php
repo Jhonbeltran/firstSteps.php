@@ -1,5 +1,5 @@
 <?php
-use PlatziPHP\Email;
+use PlatziPHP\Domain\Email;
 
 class EmailTest extends PHPUnit_Framework_TestCase{
   function testEmailValid(){

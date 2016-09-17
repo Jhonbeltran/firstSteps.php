@@ -1,6 +1,6 @@
 <?php
 //Para evitar colisiones
-namespace PlatziPHP;
+namespace PlatziPHP\Domain;
 
 class User {
   protected $email;

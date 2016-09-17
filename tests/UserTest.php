@@ -3,12 +3,12 @@
       //recordemos que para que tome una funcion como test debe llamarse testNombreFuncion
       //O poner un comentario de tipo /** @test */
       function testConstructor(){
-        $user = new \PlatziPHP\User('card@taran.tan', '1234');
-        $this->assertInstanceOf(\PlatziPHP\User::class, $user);
+        $user = new \PlatziPHP\Domain\User('card@taran.tan', '1234');
+        $this->assertInstanceOf(\PlatziPHP\Domain\User::class, $user);
       }
 
       function testGetFirstName(){
-        $user = new \PlatziPHP\User('card@fu.la', '12f34');
+        $user = new \PlatziPHP\Domain\User('card@fu.la', '12f34');
         $user->setName('Fredy', 'León');
 
         $name = $user->getFirstName();
