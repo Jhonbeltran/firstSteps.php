@@ -4,6 +4,9 @@
 namespace PlatziPHP\Infrastructure;
 
 
+use Illuminate\Support\Collection;
+use PlatziPHP\Domain\Post;
+
 class Database{
 
     public function posts()
@@ -15,6 +18,25 @@ class Database{
         );
         $statement->execute();
 
-        return $statement->fetchAll();
+        return $this->mapToPost(
+            $statement->fetchAll()
+        );
+    }
+
+    private function mapToPost(array $results){
+        $posts = new Collection();
+
+        foreach ($results as $result) {
+            $post = new Post(
+                $result['author_id'],
+                $result['title'],
+                $result['body'],
+                $result['id']
+            );
+
+            $posts->push($post);
+        }
+
+        return $posts;
     }
 }
